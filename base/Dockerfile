@@ -25,3 +25,5 @@ RUN echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
 
 # install maven
 RUN apt-get -y install maven && mkdir /root/.m2 && apt-get clean
+
+COPY UnlimitedJCEPolicyJDK8/*.jar /usr/lib/jvm/java-8-oracle/jre/lib/security/
